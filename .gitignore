@@ -1,0 +1,27 @@
+# 本文件告诉 git 哪些东西不要上传到 GitHub
+# （虚拟环境、打包产物等体积大、或由程序临时生成的，都不该进仓库）
+
+# ---- Python 字节码缓存（程序运行后自动生成，不用上传）----
+__pycache__/
+*.py[cod]
+
+# ---- 虚拟环境（几百 MB，绝不上传；别人克隆后自己建）----
+.venv/
+venv/
+env/
+
+# ---- 打包产物（PyInstaller 生成的 exe 等）----
+build/
+dist/
+*.spec
+*.log
+
+# ---- 系统临时文件 ----
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ---- 编辑器临时文件 ----
+.idea/
+.vscode/
+*.swp
